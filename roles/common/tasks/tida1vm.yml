@@ -1,0 +1,5 @@
+---
+- name: download tida1vm (0.8)
+  docker:
+    pull: always
+    image: lvm23/tida1vm:0.8

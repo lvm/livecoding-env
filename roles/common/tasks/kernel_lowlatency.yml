@@ -1,0 +1,5 @@
+---
+- name: install lowlatency kernel
+  apt:
+    name: linux-image-lowlatency
+  sudo: yes

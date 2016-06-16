@@ -1,0 +1,5 @@
+- name: a playbook to setup my livecoding environment
+  hosts: desktop
+  user: mauro
+  roles:
+    - common

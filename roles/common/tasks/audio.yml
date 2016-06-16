@@ -1,0 +1,30 @@
+---
+- name: install JACK stuff
+  apt:
+    pkg: "{{ item }}"
+    state: installed
+  with_items:
+    - jackd2
+    - jack-rack
+    - jackeq
+    - pulseaudio-module-jack
+    - qjackctl
+    - qjackrcd
+  sudo: yes
+
+- name: install virtual synths
+  apt:
+    pkg: "{{ item }}"
+    state: installed
+  with_items:
+    - amsynth
+    - qsynth
+    - fluidsynth
+    - fluid-soundfont-gm
+  sudo: yes
+
+- name: add user to "audio"
+  user: name={{ ansible_user_id }}
+        groups=audio
+        append=yes
+  sudo: yes

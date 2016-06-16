@@ -1,0 +1,7 @@
+---
+  - include: pre.yml
+  - include: audio.yml
+  - include: docker.yml
+  - include: kernel_lowlatency.yml
+  - include: reboot.yml
+  - include: tida1vm.yml

@@ -1,0 +1,22 @@
+---
+- name: install docker
+  apt:
+    pkg: "{{ item }}"
+    state: installed
+  with_items:
+    - docker.io
+    - python-docker
+  sudo: yes
+
+
+- name: add user to "docker" group
+  user: name={{ ansible_user_id }}
+        groups=docker
+        append=yes
+  sudo: yes
+
+- name: start docker service
+  service:
+    name: docker
+    state: started
+  sudo: yes
