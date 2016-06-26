@@ -1,5 +1,4 @@
 ---
-  - include: pre.yml
   - include: audio.yml
   - include: docker.yml
   - include: kernel_lowlatency.yml
